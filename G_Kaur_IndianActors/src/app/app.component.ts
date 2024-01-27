@@ -11,4 +11,5 @@ import { ContentCardComponent } from "./content-card/content-card.component";
 })
 export class AppComponent {
   title = 'G_Kaur_IndianActors';
+contentList: any;
 }
