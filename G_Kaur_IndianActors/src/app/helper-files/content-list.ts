@@ -1,4 +1,4 @@
-// File: helper-files/content-list.ts
+
 import { Content } from './content-interface'; // Assuming content-interface.ts is in the same directory
 
 class ContentList {
@@ -33,7 +33,6 @@ class ContentList {
 
     const { title, description, creator, imgURL, type } = contentItem;
 
-    // Bonus: Generate an image tag if imgURL is present
     const imageTag = imgURL ? `<img src="${imgURL}" alt="${title} Image">` : '';
 
     // Constructing HTML output

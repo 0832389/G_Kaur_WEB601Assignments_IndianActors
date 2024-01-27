@@ -53,6 +53,7 @@ export class ContentCardComponent implements OnInit {
       this.contentList.add(contentItem3);
     }
   ngOnInit(): void {
+    
   }
   }
 
