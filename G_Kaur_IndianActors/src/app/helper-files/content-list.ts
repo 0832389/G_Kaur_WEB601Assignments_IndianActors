@@ -1,8 +1,9 @@
 
-import { Content } from './content-interface'; // Assuming content-interface.ts is in the same directory
+import { Content } from './content-interface'; 
 
 class ContentList {
   private contentArray: Content[];
+imageUrl: any;
 
   constructor() {
     this.contentArray = [];

@@ -10,6 +10,7 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentCardComponent implements OnInit {
   contentList: ContentList = new ContentList();
+content: any;
   
     constructor() {
       this.contentList = new ContentList();
