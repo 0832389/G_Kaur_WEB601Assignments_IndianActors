@@ -1,5 +1,11 @@
 # GKaurIndianActors
 
+For this angular application, I am using Indian Actors as my theme.
+I have made ContentList of 3 IndianSingers: Tarsem Jassar, Ranjit Bawa and Ammy Virk.
+Along with that I added their IDs, categories, tags, creators and types.
+Images URLs are also added in the application.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
 
 ## Development server
