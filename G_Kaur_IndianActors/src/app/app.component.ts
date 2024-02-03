@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, ContentCardComponent, RouterOutlet, CommonModule, ]
+    imports: [RouterOutlet, ContentCardComponent, RouterOutlet, CommonModule]
 })
 export class AppComponent {
   title = 'G_Kaur_IndianActors';

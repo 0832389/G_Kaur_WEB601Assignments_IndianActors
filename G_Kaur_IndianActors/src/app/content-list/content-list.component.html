@@ -1,4 +1,5 @@
 
 <div *ngFor="let content of contentList; let isFirst = first" class="content-card" [class.first-card]="isFirst">
   <app-content-card [content]="content" (imageClick)="onImageClick(content)"></app-content-card>
+  
 </div>
