@@ -7,3 +7,4 @@ Part-2
 Added more contentlistcomponents in the application.
 Added styling to first element using ngFor.
 Added click event.
+Added styles to display the content.
