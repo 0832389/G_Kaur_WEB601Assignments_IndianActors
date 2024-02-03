@@ -1,6 +1,6 @@
 <p>content-card works!</p>
 
-<div *NgFor="let contentItem of contentList.content">
+<div *ngFor="let contentItem of contentList.content">
     <div [innerHTML]="contentList.getContentHTML(contentItem.id)"></div>
     <hr>
   </div>

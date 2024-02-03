@@ -1,19 +1,20 @@
 import { Component, OnInit} from '@angular/core';
-import { ContentList } from '../helper-files/content-list';
 import { Content } from '../helper-files/content-interface';
+import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-content-card',
   standalone: true,
-  imports: [],
+  imports: [RouterOutlet, ContentCardComponent, RouterOutlet, CommonModule],
   templateUrl: './content-card.component.html',
   styleUrl: './content-card.component.css'
 })
 export class ContentCardComponent implements OnInit {
-  contentList: ContentList = new ContentList();
 content: any;
+contentList: any;
   
     constructor() {
-      this.contentList = new ContentList();
   
       // Adding 3 items to the ContentList
       const contentItem1: Content = {
@@ -49,10 +50,7 @@ content: any;
   };
 
   
-      this.contentList.add(contentItem1);
-      this.contentList.add(contentItem2);
-      this.contentList.add(contentItem3);
-    }
+}
   ngOnInit(): void {
     
   }

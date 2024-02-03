@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ContentCardComponent } from "./content-card/content-card.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, ContentCardComponent]
+    imports: [RouterOutlet, ContentCardComponent, RouterOutlet, CommonModule, ]
 })
 export class AppComponent {
   title = 'G_Kaur_IndianActors';
