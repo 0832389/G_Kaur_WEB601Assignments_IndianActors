@@ -8,3 +8,9 @@ Added more contentlistcomponents in the application.
 Added styling to first element using ngFor.
 Added click event.
 Added styles to display the content.
+
+Assignment-3
+Added array that contains content with 2 types of content and empty types.
+Added pipe definition.
+Implemented Pipe on content list, including relevant styles.
+Added Search works.

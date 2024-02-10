@@ -1,8 +1,19 @@
-<p>content-card works!</p>
+<div>
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search by title">
+  <button (click)="checkExistence()">Check Existence</button>
+  <p [style.color]="searchResultMessage.includes('not exist') ? 'red' : 'green'">{{ searchResultMessage }}</p>
+</div>
 
-<div *ngFor="let contentItem of contentList.content">
-    <div [innerHTML]="contentList.getContentHTML(contentItem.id)"></div>
-    <hr>
+<div *ngFor="let content of contentList">
+  <div *ngIf="!content.type || content.type === ''">
+    <div class="content-card" [style.backgroundColor]="getBackgroundColor(content.type)">
+      <h2>{{ content.id }}</h2>
+      <h3>{{ content.title }}</h3>
+      <p>{{ content.description }}</p>
+      <p> {{content.creator }}</p>
+      <p> {{ content.imgUrl }}</p>
+      <p> {{ content.type }}</p>    
+      <p>{{ content.tags }}</p>
+    </div>
   </div>
-  
-  
+</div>

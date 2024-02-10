@@ -1,0 +1,19 @@
+.content-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* You can add more specific styling based on type if needed */
+  .content-card[type='Films'] {
+    background-color: lightblue;
+  }
+  
+  .content-card[type='Pollywood'] {
+    background-color: lightgreen;
+  }
+  
+  .content-card[type='Comedian'] {
+    background-color: lightcoral;
+  }
+  
