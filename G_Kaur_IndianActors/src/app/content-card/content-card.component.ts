@@ -8,6 +8,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./content-card.component.css']
 })
 export class ContentCardComponent implements OnInit {
+content: any;
+hoverStyle: any;
 getBackgroundColor(arg0: any) {
 throw new Error('Method not implemented.');
 }
@@ -85,6 +87,7 @@ throw new Error('Method not implemented.');
 
   searchTerm: string = '';
   searchResultMessage: string = '';
+  hoverStyle: string = ''; 
 
   constructor() { }
 

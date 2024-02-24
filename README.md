@@ -14,3 +14,11 @@ Added array that contains content with 2 types of content and empty types.
 Added pipe definition.
 Implemented Pipe on content list, including relevant styles.
 Added Search works.
+
+Assignment-4
+Image on Content-Card's  displayed a default image when no image is set on the
+content.
+Directive created and the definition applied affects.
+Definition applied to both desired affects.
+Applied directive to the type.
+Applied directive to the individual tags.

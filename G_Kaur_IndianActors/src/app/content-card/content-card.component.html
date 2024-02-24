@@ -3,10 +3,17 @@
   <button (click)="checkExistence()">Check Existence</button>
   <p [style.color]="searchResultMessage.includes('not exist') ? 'red' : 'green'">{{ searchResultMessage }}</p>
 </div>
+<div class="content-card">
+  <img *ngIf="content.imgURL; else defaultImage" [src]="content.imgURL" alt="Content Image">
+  <ng-template #defaultImage>
+    <img src="https://th.bing.com/th/id/OIP.9cb4JjhPUv_JVHOHxx4kSwHaFS?rs=1&pid=ImgDetMain" alt="Default Image">
+  </ng-template>
 
 <div *ngFor="let content of contentList">
   <div *ngIf="!content.type || content.type === ''">
     <div class="content-card" [style.backgroundColor]="getBackgroundColor(content.type)">
+      <h2 [appHoverAffect]="hoverStyle">{{ content.id }}</h2>
+      <h3 [appHoverAffect]="hoverStyle">{{ content.title }}</h3>
       <h2>{{ content.id }}</h2>
       <h3>{{ content.title }}</h3>
       <p>{{ content.description }}</p>
@@ -14,6 +21,11 @@
       <p> {{ content.imgUrl }}</p>
       <p> {{ content.type }}</p>    
       <p>{{ content.tags }}</p>
+      <p [appHoverAffect]="hoverStyle">{{ content.type }}</p>    
+      <p *ngFor="let tag of content.tags" [appHoverAffect]="hoverStyle">{{ tag }}</p>
     </div>
   </div>
 </div>
+
+      
+      
