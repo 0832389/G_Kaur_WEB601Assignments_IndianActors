@@ -22,3 +22,9 @@ Directive created and the definition applied affects.
 Definition applied to both desired affects.
 Applied directive to the type.
 Applied directive to the individual tags.
+
+Assignment-5
+Created Content component and processed them upon clicking
+the button.
+Utilized the promise pattern with success and reject functionality applied.
+Displayed content on the Content List with pipes.

@@ -1,0 +1,22 @@
+<div>
+    <input type="number" [(ngModel)]="id" placeholder="ID">
+    <input type="text" [(ngModel)]="title" placeholder="Title">
+    <input type="text" [(ngModel)]="description" placeholder="Description">
+    <input type="text" [(ngModel)]="creator" placeholder="Creator">
+    <button (click)="submitContent()">Submit</button>
+    <p *ngIf="!id || !title" style="color: red;">Please fill in all required fields.</p>
+
+  </div>
+
+<div>
+    <div *ngFor="let content of contents">
+      <h2>{{ content.title }}</h2>
+      <p>ID: {{ content.id }}</p>
+      <p>Description: {{ content.description }}</p>
+      <p>Creator: {{ content.creator }}</p>
+      <p>Type: {{ content.type }}</p>
+    </div>
+  </div>
+  
+  
+  
