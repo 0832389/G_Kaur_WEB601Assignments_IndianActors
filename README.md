@@ -28,3 +28,9 @@ Created Content component and processed them upon clicking
 the button.
 Utilized the promise pattern with success and reject functionality applied.
 Displayed content on the Content List with pipes.
+
+Assignment-6
+Created ContentDb file.
+Created service with functions.
+Used the observable pattern.
+Created messages service.
