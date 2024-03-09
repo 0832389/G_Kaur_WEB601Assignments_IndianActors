@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+/* import { Component, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 import { ContentCardComponent } from '../content-card/content-card.component';
 
@@ -75,5 +75,34 @@ throw new Error('Method not implemented.');
   }
 
   ngOnInit(): void {
+  }
+}
+ */
+
+
+import { Component, OnInit } from '@angular/core';
+import { Content } from '../helper-files/content-interface';
+import { contentList } from '../helper-files/contentDb';
+import { ContentService } from '../services/content.service';
+
+@Component({
+  template: '<ng-container #container></ng-container>',
+  selector: 'app-content-list',
+  templateUrl: './content-list.component.html',
+  styleUrls: ['./content-list.component.css']
+})
+export class ContentListComponent implements OnInit {
+  contenItem: any;
+  onImageClick(_t2: any) {
+    throw new Error('Method not implemented.');
+  }
+  contentList: Content[] = contentList; // Importing contentList from contentDb
+
+  constructor(private contentService: ContentService) {}
+
+  ngOnInit(): void {
+    this.contentService.getContentList().subscribe(content => {
+      this.contentList = content;
+    });
   }
 }
