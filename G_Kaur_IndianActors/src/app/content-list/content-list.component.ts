@@ -93,6 +93,7 @@ import { ContentService } from '../services/content.service';
 })
 export class ContentListComponent implements OnInit {
   contenItem: any;
+  contents: any;
   onImageClick(_t2: any) {
     throw new Error('Method not implemented.');
   }
@@ -105,4 +106,7 @@ export class ContentListComponent implements OnInit {
       this.contentList = content;
     });
   }
+  addContentToList(content: Content) {
+    this.contents.push(content);
 }
+};

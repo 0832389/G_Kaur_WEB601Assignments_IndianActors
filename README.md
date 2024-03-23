@@ -34,3 +34,9 @@ Created ContentDb file.
 Created service with functions.
 Used the observable pattern.
 Created messages service.
+
+Assignment-7
+Setup simulated server.
+Content service uses http methods to interact with simulated server.
+ContentList display new content.
+Message shown after content is added,

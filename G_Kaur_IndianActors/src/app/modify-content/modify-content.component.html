@@ -1,0 +1,22 @@
+<!-- <div>
+    <input type="text" [(ngModel)]="newContent.title" placeholder="Title">
+    <input type="text" [(ngModel)]="newContent.description" placeholder="Description">
+    <input type="text" [(ngModel)]="newContent.creator" placeholder="Creator">
+
+    <button (click)="addContent()">Add Content</button>
+  </div> -->
+  
+  <div>
+    <label for="id">ID:</label>
+    <input type="number" id="id" [(ngModel)]="id">
+  </div>
+  <div>
+    <label for="title">Title:</label>
+    <input type="text" id="title" [(ngModel)]="title">
+  </div>
+  <!-- Add other input fields for other content properties -->
+  
+  <button (click)="addButtonClicked()">
+    {{ id ? 'Update Content' : 'Add Content' }}
+  </button>
+  
