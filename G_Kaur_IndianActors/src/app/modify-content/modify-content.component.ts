@@ -2,8 +2,10 @@ import { Component } from '@angular/core';
 import { Component, Output, EventEmitter } from '@angular/core';
 import { Content } from '../content.interface';
 import { ContentService } from '../content.service';
+import { MatDialog } from '@angular/material/dialog';
 
-@Component({
+
+/* @Component({
   selector: 'app-modify-content',
   standalone: true,
   imports: [],
@@ -26,7 +28,7 @@ export class ModifyContentComponent {
     creator: ''
   };
  */
-  @Output() contentAdded = new EventEmitter<Content>();
+  /* @Output() contentAdded = new EventEmitter<Content>();
   newContent: { id: null; title: string; description: string; creator: string; };
 
   constructor(private contentService: ContentService) { }
@@ -44,8 +46,8 @@ export class ModifyContentComponent {
       title: '',
       description: '',
       creator: ''
-    };
-
+    }; */
+/* 
      constructor(private contentService: ContentService, private messageService: MessageService) { }
 
   addButtonClicked() {
@@ -91,6 +93,21 @@ export class ModifyContentComponent {
     this.title = '';
     // Clear other fields as per your Content interface
   };
+  */
+
+constructor(private dialog: MatDialog) {}
+
+openDialog(): void {
+  const dialogRef = this.dialog.open(AddContentDialogComponent, {
+    width: '250px',
+    data: {} 
+
+  dialogRef.afterClosed().subscribe(result => {
+    console.log('The dialog was closed');
+  })
+}
+  };
+
 
 
 

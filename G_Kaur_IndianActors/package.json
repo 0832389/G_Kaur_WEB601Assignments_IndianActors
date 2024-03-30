@@ -1,6 +1,6 @@
 {
   "name": "g-kaur-indian-actors",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "scripts": {
     "generatecomponent": "ng generate component",
     "generatepipe": "ng generate pipe",

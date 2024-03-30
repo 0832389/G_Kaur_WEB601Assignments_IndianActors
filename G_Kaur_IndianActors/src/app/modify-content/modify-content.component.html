@@ -5,7 +5,7 @@
 
     <button (click)="addContent()">Add Content</button>
   </div> -->
-  
+  <!-- 
   <div>
     <label for="id">ID:</label>
     <input type="number" id="id" [(ngModel)]="id">
@@ -18,5 +18,31 @@
   
   <button (click)="addButtonClicked()">
     {{ id ? 'Update Content' : 'Add Content' }}
-  </button>
+  </button> -->
+
+  <button mat-raised-button (click)="openDialog()">Add New Content</button>
+
+<mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="Title">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Description">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Creator">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="ID" [disabled]="true">
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="closeDialog()">Cancel</button>
+  <button mat-button (click)="addContent()">Add Content</button>
+</mat-dialog-actions>
+
   
