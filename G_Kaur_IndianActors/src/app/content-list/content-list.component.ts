@@ -77,7 +77,7 @@ throw new Error('Method not implemented.');
   ngOnInit(): void {
   }
 }
- */
+ 
 
 
 import { Component, OnInit } from '@angular/core';
@@ -110,3 +110,38 @@ export class ContentListComponent implements OnInit {
     this.contents.push(content);
 }
 };
+*/
+
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Content } from '../helper-files/content-interface';
+import { ContentService } from '../services/content.service';
+
+@Component({
+  selector: 'app-content-list',
+  templateUrl: './content-list.component.html',
+  styleUrls: ['./content-list.component.css']
+})
+export class ContentListComponent implements OnInit {
+  contentList: Content[] = [];
+
+  constructor(
+    private contentService: ContentService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    this.loadContentList();
+  }
+
+  loadContentList(): void {
+    this.contentService.getContentList().subscribe(content => {
+      this.contentList = content;
+    });
+  }
+
+  goToDetail(id: number): void {
+    this.router.navigate(['detail', id], { relativeTo: this.route });
+  }
+}
